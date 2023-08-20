@@ -1,4 +1,3 @@
-import axios from "axios";
 let date = new Date();
 let days = [
   "Sunday",
