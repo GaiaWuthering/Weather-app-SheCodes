@@ -19,6 +19,7 @@
   </head>
   <body>
     <div class="container">
+    <div class="weather-app">
       <form id="search-city">
         <input id="search-city-input" type="text" placeholder="Enter a city" />
         <button type="submit" class="search-button">Search</button>
@@ -29,16 +30,31 @@
       <h3 id="date">Sunday 20:40</h3>
       <h4 id="description">Cloudy</h4>
       <div class="row">
-        <div class="temp" id="temp-now">25</div>
+      <div class="col-6">
+        <img src="https://cdn-icons-png.flaticon.com/512/169/169367.png" alt="Clear" width="40px" height="40px"/>
+        <span class="temp" id="temp-now">25</span>
         <span class="temp-unit" id="temp-unit">
           <a href="#" id="celcius-link">°C</a> |
           <a href="#" id="farenheit-link">°F</a></span
         >
       </div>
-
-      <a href="https://github.com/GaiaWuthering/Weather-app-SheCodes"
-        >Source Code</a
-      >
+      <divc class="col-6">
+<ul>
+  <li>
+    Precipitation: 0%
+  </li>
+  <li> Humiditity: 0%  </li>
+  <li>  Wind: 0 km/h </li>
+</ul>
+      </div>
+</div>
+</div>
+<small>
+      <a href="https://github.com/GaiaWuthering/Weather-app-SheCodes" target="_blank"
+        >Open-source code</a
+      > 
+      by Gaia Wuthering
+      </small>
     </div>
 
     <script src="SRC/script.js"></script>
