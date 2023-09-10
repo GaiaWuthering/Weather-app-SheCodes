@@ -4,7 +4,7 @@
     <title>Weather</title>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <meta charset="UTF-8" />
-    
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,43 +20,61 @@
   </head>
   <body id="body">
     <div class="container">
-    <div class="weather-app">
-      <form id="search-city">
-        <input id="search-city-input" type="text" placeholder="Enter a city" />
-        <button type="submit" class="search-button">Search</button>
-        <button id="current-button" value="Current">Current</button>
-      </form>
-      <br />
-      <h1 class="city" id="city">Brighton</h1>
-      <h3 id="date">Sunday 20:40</h3>
-      <h4 id="description">Cloudy</h4>
-      <div class="row">
-      <div class="col-6">
-        <img src="https://cdn-icons-png.flaticon.com/512/169/169367.png" alt="Clear" width="40px" height="40px"/>
-        <span class="temp" id="temp-now">25</span>
-        <span class="temp-unit" id="temp-unit">
-          <a href="#" id="celcius-link">°C</a> |
-          <a href="#" id="farenheit-link">°F</a></span
-        >
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-city">
+            <input
+              id="search-city-input"
+              type="text"
+              placeholder="Enter a city"
+            />
+            <button type="submit" class="search-button">Search</button>
+            <button id="current-button" value="Current">Current</button>
+          </form>
+          <br />
+          <h1 class="city" id="city">Brighton</h1>
+          <h3 id="date">Sunday 20:40</h3>
+          <h4 id="description">Cloudy</h4>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/169/169367.png"
+                  alt="Clear" 
+                  id = "icon"
+                  height="70"
+                  
+                />
+                
+                <span class="temp" id="temperature">25</span>
+                <span class="temp-unit" id="temp-unit">
+                  <span class = "position"></span><a href="#" id="celcius-link">°C</a> |
+                  <a href="#" id="farenheit-link">°F</a></span
+                >
+                </span>
+
+              
+            </div>
+          </div>
+          <div class="col-6">
+            <ul>
+              
+              <li>Humiditity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="wind"></span> km/h</li>
+            </ul>
+          </div>
+        </div>
       </div>
-      <div class="col-6">
-<ul>
-  <li>
-    Precipitation: 0%
-  </li>
-  <li> Humiditity: 0%  </li>
-  <li>  Wind: 0 km/h </li>
-</ul>
-      </div>
+
       <small>
-      <a href="https://github.com/GaiaWuthering/Weather-app-SheCodes" target="_blank"
-        >Open-source code</a
-      > 
-      by Gaia Wuthering
+        <a
+          href="https://github.com/GaiaWuthering/Weather-app-SheCodes"
+          target="_blank"
+          >Open-source code</a
+        >
+        by Gaia Wuthering
       </small>
-</div>
-
-
+    </div>
 
     <script src="SRC/script.js"></script>
   </body>
