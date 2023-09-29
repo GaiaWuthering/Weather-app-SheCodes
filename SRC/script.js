@@ -1,5 +1,3 @@
-
-
 let date = new Date();
 let days = [
   "Sunday",
@@ -24,14 +22,13 @@ let now = document.querySelector("h3");
 now.innerHTML = `${currentDay}, ${currentHour}:${currentMinutes}`;
 
 function displayForecast(response) {
-
   let forecast = response.data.daily;
 
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
-  
-  forecast.forEach(function(forecastDay) {
+
+  forecast.forEach(function (forecastDay) {
     forecastHTML =
       forecastHTML +
       `
@@ -50,7 +47,6 @@ function displayForecast(response) {
             </div>
           </div>
         `;
-  
   });
 
   forecastHTML = forecastHTML + `</div>`;
@@ -83,8 +79,6 @@ function displayTemperature(response) {
   let windElement = document.querySelector("#wind");
 
   let iconElement = document.querySelector("#icon");
-
-  
 
   celsiusTemperature = response.data.main.temp;
 
@@ -149,4 +143,3 @@ let celsiusLink = document.querySelector("#celcius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchCity("Brighton");
-displayForecast();
